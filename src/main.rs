@@ -48,7 +48,8 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let response: ApiResponse = reqwest::blocking::get(endpoint)?.json()?;
 
-    println!("{:#?}", response);
+    // println!("{:#?}", response);
+    println!("Tay Ho AQI (satellite): {}", response.current.us_aqi);
 
     Ok(())
 }
